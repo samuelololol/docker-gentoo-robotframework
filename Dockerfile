@@ -7,4 +7,5 @@ RUN echo "*/* PYTHON_TARGETS: python3_6" >> /etc/portage/package.use/python
 RUN echo "*/* PYTHON_SINGLE_TARGET: -* python3_6" >> /etc/portage/package.use/python
 RUN emerge -uv dev-python/robotframework dev-python/configparser
 RUN emerge -uv dev-vcs/git vim
-RUN emerge -uv net-fs/cifs-utils net-fs/nfs-utils
+RUN FEATURES="-sandbox -usersandbox" emerge -uv net-fs/cifs-utils
+RUN emerge -uv net-fs/nfs-utils
