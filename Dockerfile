@@ -4,6 +4,7 @@ MAINTAINER samuelololol <samuelololol@gmail.com>
 COPY --from=portage /var/db/repos/gentoo /var/db/repos/gentoo
 RUN echo "dev-python/robotframework ~amd64" >> /etc/portage/package.keywords
 RUN echo "dev-python/robotframework-sshlibrary ~amd64" >> /etc/portage/package.keywords
+RUN echo "dev-python/robotframework PYTHON_SINGLE_TARGET: python3_6" >> /etc/portage/package.use
 RUN emerge -uv \
     dev-python/robotframework \
     dev-python/robotframework-sshlibrary \
